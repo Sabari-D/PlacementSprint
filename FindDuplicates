@@ -1,0 +1,27 @@
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class FindDuplicates {
+    static void main() {
+        Scanner scanner = new Scanner(System.in);
+        int size = scanner.nextInt();
+        int[] arr = new int[size];
+
+        for(int i=0; i<size; i++){
+            arr[i] = scanner.nextInt();
+        }
+
+        Set<Integer> set = new HashSet<>();
+        for(int val : arr){
+            if (set.contains(val)) {
+
+                System.out.println(val);
+                return;
+            }
+            set.add(val);
+        }
+
+    }
+
+}
