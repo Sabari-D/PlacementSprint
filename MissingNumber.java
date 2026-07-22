@@ -69,13 +69,14 @@ public class Main
 		//xor from 1 to n 
 		int n = arr.length+1;
 		int xorFull = 0, xorArray = 0;
-		for(int i=1; i<=n; i++){
-		    xorFull = xorFull ^ i;
-		}
+		// for(int i=1; i<=n; i++){
+		//     xorFull = xorFull ^ i;
+		// }
 		
 		//xor elements in the array
-		for(int val : arr){
-		    xorArray = xorArray ^ val;
+		for(int i=0; i<arr.length; i++){
+		    xorArray = xorArray ^ arr[i];
+			xorFull = xorFull ^ (i+1);
 		}
 	
 		System.out.print(xorArray ^ xorFull);
