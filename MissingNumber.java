@@ -74,10 +74,11 @@ public class Main
 		// }
 		
 		//xor elements in the array
-		for(int i=0; i<arr.length; i++){
+		for(int i=0; i<arr.length-1; i++){
 		    xorArray = xorArray ^ arr[i];
 			xorFull = xorFull ^ (i+1);
 		}
+		xorFull = xorFull ^ arr.length-1;
 	
 		System.out.print(xorArray ^ xorFull);
 	}
