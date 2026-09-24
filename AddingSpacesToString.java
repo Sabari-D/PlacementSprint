@@ -7,7 +7,7 @@ class Solution {
                 sb.append(" ");
                 spaceInd++;
             }
-            sb.append(s.charAt(i)); 
+            sb.append(s.charAt(i));
         }
         return sb.toString();
     }
